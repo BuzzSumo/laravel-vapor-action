@@ -18,6 +18,9 @@ RUN set -xe && \
 # Install Node.js (needed for Vapor's NPM Build)
 RUN apk add --update nodejs npm
 
+# Install Yarn
+RUN apk add yarn
+
 # Prepare out Entrypoint (used to run Vapor commands)
 COPY vapor-entrypoint /usr/local/bin/vapor-entrypoint
 
